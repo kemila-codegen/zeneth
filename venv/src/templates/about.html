@@ -1,0 +1,258 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about_responsive.css' %}">
+
+
+    <script src="{% static 'js/about.js' %}"></script>
+    <script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+
+
+
+
+<!--- Connect -->
+
+
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="section_subtitle" style="opacity: 0.5">
+                    simply amazing places
+                </div>
+                <div class="section_title">A few words about us</div>
+            </div>
+        </div>
+        <div class="row about_row">
+            <div class="col-lg-7">
+                <div class="about_content">
+                    <div class="text_highlight ts-text-light">
+                        We are boutique hospitality experts. We provide luxury hospitality experiences to travellers.
+                        Our bespoke collection of boutique villas and hotels combined with unique Sri Lankan experiences
+                        ensures you get a taste of everything; from sun, sea and mountains to adventure, history and
+                        culture.
+                    </div>
+                    <div class="about_text">
+
+                        <h2 class="u-mb-20">Our story</h2>
+
+                        <div class="text_highlight">
+                            Our journey began when we recognized a gap in the visibility of luxury properties owned by
+                            individuals who have the passion to promote tourism in Sri lanka, but lacked the expertise
+                            to execute it.
+
+                            With the combined expertise of our team, we believed we could provide a solution to this.
+                            Thus began Zēnəth Villas; Zēnəth translates to <span
+                                style="font-weight: bold; color: #919499">“the time at which something is most powerful or successful”</span>
+                            , which is what we always strive for.
+
+                            We aspire to enhance visibility and awareness of these properties by effectively showcasing
+                            and pairing them with specialized services to offer a comprehensive luxury experience.
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="about_image">
+                    <img style="height: 500px;"
+                         src="{% static 'images/pexels-alex-azabache-3848418.jpg' %}" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Milestones -->
+
+<div class="milestones aos-animate" data-aos="fade-up" data-aos-duration="2000">
+    <div class="container">
+        <div class="row">
+
+            <!-- Milestone -->
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img style="opacity: 0.5 ;" src="{% static 'images/happiness.svg'%}" alt="">
+                    </div>
+                    <div class="milestone_counter" data-end-value="1268">0</div>
+                    <div class="milestone_text">Happy Clients</div>
+                </div>
+            </div>
+
+            <!-- Milestone -->
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img style="opacity: 0.5 ;" src="{% static 'images/customer.svg'%}" alt="">
+                    </div>
+                    <div class="milestone_counter" data-end-value="17">0</div>
+                    <div class="milestone_text">Bookings</div>
+                </div>
+            </div>
+
+            <!-- Milestone -->
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img style="opacity: 0.5 ;" src="{% static 'images/hotel.svg'%}" alt="">
+                    </div>
+                    <div class="milestone_counter" data-end-value="30">0</div>
+                    <div class="milestone_text">Villas</div>
+                </div>
+            </div>
+
+            <!-- Milestone -->
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img style="opacity: 0.5 ;" src="{% static 'images/coronavirus.svg'%}" alt=""></div>
+                    <div class="milestone_counter" data-end-value="15">0</div>
+                    <div class="milestone_text">Destinations</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Why Choose Us -->
+
+<div class="why aos-animate" data-aos="fade-up" data-aos-duration="2000" style="background-image: url('{% static 'images/pexels-domenico-bertazzo-4769075.jpg'%}')">
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="section_subtitle">simply amazing places</div>
+                <div class="section_title"><h2>Why choose us?</h2></div>
+            </div>
+        </div>
+
+        <div class="row why_row">
+
+            <!-- Why item -->
+            <div class="col-lg-4 why_col">
+                <div class="why_item">
+                    <div class="why_image hover01">
+                        <figure> <img src="{% static 'images/pexels-sora-shimazaki-5938621.jpg'%}" alt=""></figure>
+                        <div class="why_icon d-flex flex-column align-items-center justify-content-center">
+                            <img src="{% static 'icon/plane.png'%}" alt="Safe and Secure">
+                        </div>
+                    </div>
+                    <div class="why_content text-center">
+                        <div class="why_title">Safe and Secure</div>
+                        <div class="why_text u-mt-20">
+                            Our villas will be thoroughly cleaned and  sanitized on a daily basis to ensure your  safety. Our villas are offered exclusively. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why item -->
+            <div class="col-lg-4 why_col">
+                <div class="why_item">
+                    <div class="why_image hover01">
+                        <figure><img src="{% static 'images/why_2.jpg'%}" alt=""></figure>
+                        <div class="why_icon d-flex flex-column align-items-center justify-content-center">
+                            <img src="{% static 'icon/cocktail.png'%}" alt="Exclusivity">
+                        </div>
+                    </div>
+                    <div class="why_content text-center">
+                        <div class="why_title">Exclusivity</div>
+                        <div class="why_text u-mt-20">
+                            Villas are offered to you and your group  only and you don’t have to worry about  other crowds being in your space. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why item -->
+            <div class="col-lg-4 why_col">
+                <div class="why_item">
+                    <div class="why_image hover01">
+                        <figure><img src="{% static 'images/pexels-jan-n-g-u-y-e-n-.jpg'%}" alt=""></figure>
+                        <div class="why_icon d-flex flex-column align-items-center justify-content-center">
+                            <img src="{% static 'icon/walk.png'%}" alt="Curated meals">
+                        </div>
+                    </div>
+                    <div class="why_content text-center">
+                        <div class="why_title">Curated meals</div>
+                        <div class="why_text u-mt-20">
+                            Your meals will be customized the way  you want it.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row why_row">
+
+            <!-- Why item -->
+            <div class="col-lg-4 why_col">
+                <div class="why_item">
+                    <div class="why_image hover01">
+                        <figure> <img src="{% static 'images/pexels-andrea-piacquadio-3796810.jpg'%}" alt=""></figure>
+                        <div class="why_icon d-flex flex-column align-items-center justify-content-center">
+                            <img src="{% static 'icon/team.png'%}" alt="Personalized service">
+                        </div>
+                    </div>
+                    <div class="why_content text-center">
+                        <div class="why_title">Personalized service</div>   
+                        <div class="why_text u-mt-20">
+                            Villa staff try their best to anticipate your  wants and needs to ensure they go the  extra mile.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why item -->
+            <div class="col-lg-4 why_col">
+                <div class="why_item">
+                    <div class="why_image hover01">
+                        <figure><img src="{% static 'images/pexels-jill-burrow-6758107.jpg'%}" alt=""></figure>
+                        <div class="why_icon d-flex flex-column align-items-center justify-content-center">
+                            <img src="{% static 'icon/home.png'%}" alt="Home away from home">
+                        </div>
+                    </div>
+                    <div class="why_content text-center">
+                        <div class="why_title">Home away from home</div>
+                        <div class="why_text u-mt-20">
+                            Make yourself at home while being on your  luxury holiday.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why item -->
+            <div class="col-lg-4 why_col">
+                <div class="why_item">
+                    <div class="why_image hover01">
+                        <figure><img src="{% static 'images/why_3.jpg'%}" alt=""></figure>
+                        <div class="why_icon d-flex flex-column align-items-center justify-content-center">
+                            <img src="{% static 'icon/flexibility.png'%}" alt="Flexibility">
+                        </div>
+                    </div>
+                    <div class="why_content text-center">
+                        <div class="why_title">Flexibility</div>
+                        <div class="why_text u-mt-20">
+                            You will not have to stick to specific schedules or fixed itineraries. Villa staff are always  ready to accommodate special requests.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

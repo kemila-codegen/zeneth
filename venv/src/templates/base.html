@@ -1,0 +1,181 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/main-style.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
+
+    <script src="https://kit.fontawesome.com/0926c4cddf.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"/>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="preloader"></div>
+
+<!-- Navigation -->
+<div class="container">
+    <nav class="navbar navbar-expand-md navbar-light bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand a-logo" href=""><img src="{% static 'images/logo.png'%}"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" style="font-size: 24px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner_with_us" data-toggle="tooltip" data-placement="bottom"
+                           title="I'm a villa owner interested in signing up">Partner
+                            With Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="our_collection" data-toggle="tooltip" data-placement="bottom"
+                           title="I'm looking for boutique accommodation for my getaway">Our
+                            Collection
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Navigation end -->
+
+
+
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+
+
+
+<section class="l-page-footer u-mt-60">
+    <div class="l-wrapper">
+
+        <div class="c-footer">
+            <div class="c-footer__items ts-flex-column">
+                <span class="ts-white"><a class="c-footer-logo" href="service.html"><img src="{% static 'images/logo-footer.png'%}"> </a></span>
+                <span class="s7 ts-white c-footer-txt">Boutique experiences. Personalized services. Absolutely local.</span>
+                
+            </div>
+            <div class="c-footer__items">
+                <ul class="c-footer-ul-list">
+                    <li class="u-mb-20"><a href="https://www.facebook.com/zenethvillas/" target="_blank"><span class="ts-flex ts-white s6"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                          <span class="u-ml-10 c-footer-txt">Facebook</span></span></a></li>
+                    <li class="u-mb-20"><a href="#" target="_blank"><span class="ts-flex ts-white s6">
+                          <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+                          <span class="u-ml-10 c-footer-txt">Google Plus</span></span></a></li>
+                    <li class="u-mb-20"><a href="https://www.linkedin.com/company/zeneth-labs" target="_blank"><span class="ts-flex ts-white s6">
+                          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                          <span class="u-ml-10 c-footer-txt">Linkedin</span></span></a></li>
+                    <li class="u-mb-20"><a href="https://instagram.com/zeneth_villas?utm_medium=copy_link" target="_blank"><span class="ts-flex ts-white s6">
+                          <i class="fa fa-instagram" aria-hidden="true"></i>
+                          <span class="u-ml-10 c-footer-txt">Instagram</span></span></a></li>
+                    <li class="u-mb-20"><a href="privacy-policy.html"><span class="ts-flex ts-white s6">
+                          <i class="fa fa-shield" aria-hidden="true"></i>
+                          <span class="u-ml-10 c-footer-txt">Terms & Conditions</span></span></a></li>
+                </ul>
+            </div>
+            <div class="c-footer__items">
+                <ul class="c-footer-ul-list">
+                    <li class="u-mb-10">
+                        <span class="c-footer-txt-title"><i class="fa fa-map-marker" aria-hidden="true"></i> Address</span>
+                        <span class="c-footer-txt">Colombo, Sri Lanka</span>
+                    </li>
+                    <li class="u-mb-10">
+                        <span class="c-footer-txt-title"><i class="fa fa-phone-square" aria-hidden="true"></i> Phone</span>
+                        <span class="c-footer-txt"><a href="tel:+94768243727">+94 76 824 3727</a> / <a href="tel:+94775050707">+94 77 505 0707</a></span>
+                    </li>
+                    <li class="u-mb-10">
+                        <span class="c-footer-txt-title"><i class="fa fa-envelope" aria-hidden="true"></i> Email</span>
+                        <span class="c-footer-txt"><a href="mailto:info@zenethlabs.com">info@zenethlabs.com</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script>
+    $(function () {
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    })
+</script>
+
+<script>
+    jQuery(function($) {
+        var path = window.location.href;
+        $('ul a').each(function() {
+            if (this.href === path) {
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
+
+
+
+<script>
+	var loader = document.getElementById("preloader");
+	
+	window.addEventListener("load", function(){
+		loader.style.display = "none";
+	})
+</script>
+
+
+</body>
+
+</html>

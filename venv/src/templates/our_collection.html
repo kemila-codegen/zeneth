@@ -1,0 +1,436 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+<section class="l-page-header">
+    <!-- Hero -->
+    <div class="c-hero c-hero--our-collection">
+        <div class="c-hero__text">
+            <h2 class="t2 ts-white aos-init" data-aos="fade-right" data-aos-duration="2000">
+                Book Your Boutique Holiday</h2>
+            <span class="s6 ts-white aos-init" data-aos="fade-left" data-aos-duration="2000">Perfect Boutique Accomodation for Your
+                   Gataway</span>
+        </div>
+    </div>
+    <!-- Hero end -->
+</section>
+
+<section class="l-page-body">
+    <div class="l-page-body__row l-wrapper">
+
+        <!-- Our listed villa -->
+        <div class="our-listed-villa__main u-mt-60 aos-animate" data-aos="fade-up" data-aos-duration="2000">
+            <h2 class="t2 ts-dark">Our Listed Villas</h2>
+
+            <div class="our-listed-villa">
+
+                {% for villa in villas %}
+                <!-- card 1 -->
+                <div class="our-listed-villa__items">
+                    <div class="villa__box">
+                        <span class="open-modal" data-open="{{villa.image_gallery_id}}">
+                            <img class="villa__img" src="{{villa.img.url}}">
+                        </span>
+                    </div>
+
+                    <h3 class="villa-text u-mt-20">{{villa.name}}</h3>
+
+                    <div class="our-listed-villa__icon u-mt-40">
+                          <span class="ts-dark ts-flex-center s6">
+                              <i class="fas fa-users"></i>
+                              <span class="s8">12 Adults</span></span>
+
+                        <span class="ts-dark ts-flex-center s6">
+                              <i class="fas fa-bed"></i>
+                              <span class="s8">Beds 4</span></span>
+
+                        <span class="ts-dark ts-flex-center s6">
+                              <i class="fas fa-eye"></i>
+                              <span class="s8">Ocean view</span></span>
+                    </div>
+
+                    <div class="villa-content-main">
+                        <div class="villa-content ts-text-light">
+                            {{villa.desc}}
+                        </div>
+
+                        <div class="villa-content-sub">
+                            <span class="tp-amenities open-modal" data-open="{{ villa.read_more_id }}">Read More</span>
+                        </div>
+                    </div>
+
+                    <div class="villa-info">
+                        <ul class="villa-info-list">
+                            <div class="villa-info-1">From</div>
+                            <div class="villa-info-2">USD {{villa.price}}</div>
+                        </ul>
+
+                        <ul class="villa-info-list sep-line">
+                            <li><span class="ts-chip ts-pointer" data-open="enquire" onclick="addName('{{villa.name}}')">Enquire now</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                {% endfor %}
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Our listed villa end -->
+
+
+        {% for image in image_gallery_id %}
+        <!-- Image gallery modal-->
+        <div class="modal" id="{{image.image_gallery_id}}">
+            <div class="modal-dialog">
+                <header class="modal-header">
+                    <button class="close-modal" aria-label="close modal" data-close>✕</button>
+                </header>
+                <section class="modal-content">
+                    <div class="gallery js-flickity"
+                        data-flickity-options='{ "wrapAround": true }'>
+                        <div class="gallery-cell" style="background-image: url({{image.img_1.url}})"></div>
+                        <div class="gallery-cell" style="background-image: url({{image.img_2.url}})"></div>
+                        <div class="gallery-cell" style="background-image: url({{image.img_3.url}})"></div>
+                        <div class="gallery-cell" style="background-image: url({{image.img_4.url}})"></div>
+                        <div class="gallery-cell" style="background-image: url({{image.img_5.url}})"></div>
+                    </div>
+                </section>  
+            </div>
+        </div>
+        <!-- END Image gallery modal-->
+        {% endfor %}
+
+
+
+        {% for read in read_more %}
+        <!-- Read more modal-->
+        <div class="modal" id="{{ read.read_more_id }}">
+            <div class="modal-dialog modal-dialog-more">
+                <header class="modal-header">
+                    <button class="close-modal" aria-label="close modal" data-close>✕</button>
+                </header>
+                <section class="modal-content">
+                    <img class="modal-content__img" src="{{read.img.url}}">
+                </section>
+            </div>
+        </div>
+        <!-- END Read more modal-->
+
+        {% endfor %}
+
+        
+        <!-- Enquire modal-->
+        <div class="modal" id="enquire">
+            <div class="modal-dialog enquire-now">
+                <header class="modal-header">
+                    <button class="close-modal" aria-label="close modal" data-close>✕</button>
+                </header>
+                <section class="modal-content">
+
+                    <form action="#" id="enquire_form" class="enquire_form" name="submit-to-google-sheet">
+                    <div id="form_alerts"></div>
+                        <div class="enquire-container">
+                            <!-- First row -->
+                            <div class="enquire_row">
+                                <div class="enquire-grid enquire-grid--option">
+                                    <div class="ts-flex">
+                                        <div class="enquire_input u-mr-20">
+                                            <select class="contact_input contact_option contact_input_name inpt">
+                                                <option>Mr.</option>
+                                                <option>Mrs.</option>
+                                                <option>Mis.</option>
+                                            </select>
+                                            <div class="input_border"></div>
+                                        </div>
+                                        <div class="enquire_input enq-name">
+                                            <input type="text" class="contact_input contact_input_name inpt" id="firstName" name="firstName" placeholder="First Name *" required="required">
+                                            <div class="input_border"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="enquire_input">
+                                        <input type="text" class="contact_input contact_input_name inpt" id="lastName" name="lastName" placeholder="Last Name *" required="required">
+                                        <div class="input_border"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Second row -->
+                            <div class="enquire_row">
+                                <div class="enquire-grid">
+                                    <div class="enquire_input">
+                                        <input type="text" class="contact_input contact_input_name inpt" id="email" name="email" placeholder="Email *" required="required">
+                                        <div class="input_border"></div>
+                                    </div>
+
+                                    <div class="enquire_input">
+                                        <input type="text" class="contact_input contact_input_name inpt" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number *" required="required">
+                                        <div class="input_border"></div>
+                                    </div>
+
+                                    <div class="enquire_input">
+                                        <input type="text" class="contact_input contact_input_name inpt" id="nationality" name="nationality" placeholder="Nationality *" required="required">
+                                        <div class="input_border"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Third row -->
+                            <div class="enquire_row">
+                                <div class="enquire-grid">
+                                    <div class="enquire_input">
+                                        <input type="text" class="contact_input contact_input_name inpt" id="Number_of_Adults" name="Number_of_Adults" placeholder="Number of Adults *" required="required">
+                                        <div class="input_border"></div>
+                                    </div>
+
+                                    <div class="enquire_input">
+                                        <input type="text" class="contact_input contact_input_name inpt" id="Children_Aged_0-5" name="Children_Aged_0-5" placeholder="Number of Children Aged 0 - 5 *" required="required">
+                                        <div class="input_border"></div>
+                                    </div>
+
+                                    <div class="enquire_input">
+                                        <input type="text" class="contact_input contact_input_name inpt" id="Children_Aged_6-12" name="Children_Aged_6-12" placeholder="Number of Children Aged 6 - 12 *" required="required">
+                                        <div class="input_border"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Forth row -->
+                            <div class="enquire_row">
+                                <div class="enquire-grid">
+
+                                    <div class="enquire_input">
+                                        <input type="text" class="contact_input contact_input_name inpt" id="arrival-date" name="arrival-date" placeholder="Arrival Date *" />
+                                        <div class="input_border"></div>
+                                    </div>
+
+                                    <div class="enquire_input">
+                                        <input type="text"  class="contact_input contact_input_name inpt" id="departure-date" name="departure-date" placeholder="Departure Date *" />
+                                        <div class="input_border"></div>
+                                    </div>
+
+                                    <div class="enquire_input">
+                                        <input type="text"  class="contact_input contact_input_name inpt"  id="pref-stay" name="PreferredStay" placeholder="Preferred Stay *" />
+                                        <div class="input_border"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="enquire_row">
+                                <div class="enquire_input">
+                                    <label class="ts-txt">Maximum 300 characters</label>
+                                    <textarea class="contact_textarea contact_input inpt" id="message" name="message" placeholder="Message" required="required"></textarea>
+                                    <div class="input_border"></div>
+                                </div>
+                                <span class="ts-flex u-mt-10">
+                                    <p class="s7">300</p> <label class="s7 u-ml-10">Character(s) Remaining</label>
+                                </span>
+
+                            </div>
+
+                            <div class="enquire_button_row ts-position">
+                                <button class="enquire_button btn-send">Submit Now</button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </section>
+                <footer class="modal-footer ts-position">
+                    <div class="ts-flex-end">
+                        <button class="enquire_button btn-close close-modal" aria-label="close modal" data-close>Cancel</button>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- END Enquire modal-->
+
+
+
+
+
+
+
+        <!-- Animation -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="{% static 'js/flickity.pkgd.min.js'%}"></script>
+        <script src="{% static 'js/testimonial.js'%}"></script>
+        <script src="{% static 'js/modal.js'%}"></script>
+        <script src="{% static 'js/read-more.js'%}"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            function toggle_div_fun(id) {
+                var divelement = document.getElementById(id);
+                if (divelement.style.display == 'block')
+                    divelement.style.display = 'none';
+                else
+                    divelement.style.display = 'block';
+            }
+        </script>
+
+        <script>
+            $(function () {
+                $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                })
+            })
+        </script>
+
+        <script>
+            jQuery(function($) {
+                var path = window.location.href;
+                $('ul a').each(function() {
+                    if (this.href === path) {
+                        $(this).addClass('active');
+                    }
+                });
+            });
+        </script>
+
+
+        <script>
+            flatpickr("#arrival-date", {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+            });
+
+            flatpickr("#departure-date", {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+            });
+        </script>
+
+        <script>
+            function addName(v){
+                document.getElementById('pref-stay').value = v
+                console.log(v);
+                return false;
+            }
+        </script>
+
+        <script>
+            $('textarea').keypress(function(e) {
+                var tval = $('textarea').val(),
+                    tlength = tval.length,
+                    set = 300,
+                    remain = parseInt(set - tlength);
+                $('p').text(remain);
+                if (remain <= 0 && e.which !== 0 && e.charCode !== 0) {
+                    $('textarea').val((tval).substring(0, tlength - 1))
+                }
+            })
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="section-break aos-animate" data-aos="fade-down" data-aos-duration="2000"></div>
+
+        <!-- Testimonial -->
+        <div class="c-testimonial aos-animate" data-aos="fade-up" data-aos-duration="2000">
+            <h2 class="t2 ts-dark">REVIEWS</h2>
+
+            <section id="testim" class="testim u-mt-30">
+                <div class="wrap">
+
+                    <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                    <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                    <ul id="testim-dots" class="dots">
+                        <li class="dot active"></li><!--
+                        -->
+                        <li class="dot"></li><!--
+                        -->
+                        <li class="dot"></li><!--
+                        -->
+                        <li class="dot"></li><!--
+                        -->
+                        <li class="dot"></li>
+                    </ul>
+                    <div id="testim-content" class="cont">
+
+                        <div class="active">
+                            <div class="img"><img src="{% static 'images/temp-user.png'%}" alt=""></div>
+                            <h2>Scott Mastroianni</h2>
+                            <p>Thank you again for everything. The meeting went very well. Everyone loved the hotel and the support all your staff provided. 
+                            It was a pleasure to work with a true professional like yourself. You made everything run seamless.”</p>
+                        </div>
+
+                        <div>
+                            <div class="img"><img src="{% static 'images/temp-user.png'%}" alt=""></div>
+                            <h2>Mr. Russell Walters</h2>
+                            <p>It’s a classic, historical hotel. The service at the front door, the front desk, housekeeping, 
+                            and the conference serving staff was very warm, welcoming, and professional.</p>
+                        </div>
+
+                        <div>
+                            <div class="img"><img src="{% static 'images/temp-user.png'%}" alt=""></div>
+                            <h2>Meri J</h2>
+                            <p>Always an outstanding, quality experience. Great deal too! Doormen are the best in the city. Great location for a meeting. 
+                            Excellent service by staff across the board. Quiet sleep. Great bar and cocktails..</p>
+                        </div>
+
+                        <div>
+                            <div class="img"><img src="{% static 'images/temp-user.png'%}" alt=""></div>
+                            <h2>Maura LaGue</h2>
+                            <p>Where do I start, I was so pleased with the meeting location and space and wanted to say thank you. 
+                            The hospitality in this hotel has been nothing short of “Service Excellence” The rooms are spacious, clean and super comfortable. </p>
+                        </div>
+
+                        <div>
+                            <div class="img"><img src="{% static 'images/temp-user.png'%}" alt=""></div>
+                            <h2>Ms. Linda Harper</h2>
+                            <p>Thank you for everything—All the Hotel Monteleone staff are amazing and we 
+                            really appreciate the help and level of service we received with every request and interaction.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+        <!-- Testimonial -->
+
+    </div>
+
+
+</section>
+
+
+
+
+
+{% endblock %}
