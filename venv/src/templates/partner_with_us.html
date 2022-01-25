@@ -5,6 +5,9 @@
 
 
 
+<div id="preloader"></div>
+
+
 <section class="l-page-header">
     <!-- Hero -->
     <div class="c-hero c-hero--our-services">
@@ -204,14 +207,11 @@
                     <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
                     <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
                     <ul id="testim-dots" class="dots">
-                        <li class="dot active"></li><!--
-                        -->
-                        <li class="dot"></li><!--
-                        -->
-                        <li class="dot"></li><!--
-                        -->
-                        <li class="dot"></li><!--
-                        -->
+                        <li class="dot active"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
                         <li class="dot"></li>
                     </ul>
                     <div id="testim-content" class="cont">
@@ -255,6 +255,17 @@
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                 ullamco.</p>
                         </div>
+
+                        
+
+                         <div>
+                            <div class="img"><img src="{% static 'images/temp-user.png'%}" alt=""></div>
+                            <h2>Ms. Lorem R. Ipsum</h2>
+                            <p> KEMILA Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco.</p>
+                        </div>
+
 
                     </div>
 
@@ -372,7 +383,7 @@
 <script src="{% static 'js/flickity.pkgd.min.js'%}"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="{% static 'js/modal.js'%}"></script>
-<script src="j{% static 's/read-more.js'%}"></script>
+<script src="{% static 's/read-more.js'%}"></script>
 <script>
     AOS.init();
 </script>
@@ -384,7 +395,7 @@
     })
 </script>
 
-<script src="js/testimonial.js"></script>
+<script src="{% static 'js/testimonial.js'%}"></script>
 
 <script>
     jQuery(function($) {
@@ -395,6 +406,17 @@
             }
         });
     });
+</script>
+
+
+
+
+<script>
+	var loader = document.getElementById("preloader");
+	
+	window.addEventListener("load", function(){
+		loader.style.display = "none";
+	})
 </script>
 
 

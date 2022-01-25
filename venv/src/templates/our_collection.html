@@ -5,7 +5,7 @@
 
 
 
-
+<div id="preloader"></div>
 
 <section class="l-page-header">
     <!-- Hero -->
@@ -265,92 +265,6 @@
 
 
 
-        <!-- Animation -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="{% static 'js/flickity.pkgd.min.js'%}"></script>
-        <script src="{% static 'js/testimonial.js'%}"></script>
-        <script src="{% static 'js/modal.js'%}"></script>
-        <script src="{% static 'js/read-more.js'%}"></script>
-        <script>
-            AOS.init();
-        </script>
-        <script>
-            function toggle_div_fun(id) {
-                var divelement = document.getElementById(id);
-                if (divelement.style.display == 'block')
-                    divelement.style.display = 'none';
-                else
-                    divelement.style.display = 'block';
-            }
-        </script>
-
-        <script>
-            $(function () {
-                $(function () {
-                    $('[data-toggle="tooltip"]').tooltip()
-                })
-            })
-        </script>
-
-        <script>
-            jQuery(function($) {
-                var path = window.location.href;
-                $('ul a').each(function() {
-                    if (this.href === path) {
-                        $(this).addClass('active');
-                    }
-                });
-            });
-        </script>
-
-
-        <script>
-            flatpickr("#arrival-date", {
-                enableTime: true,
-                dateFormat: "Y-m-d H:i",
-            });
-
-            flatpickr("#departure-date", {
-                enableTime: true,
-                dateFormat: "Y-m-d H:i",
-            });
-        </script>
-
-        <script>
-            function addName(v){
-                document.getElementById('pref-stay').value = v
-                console.log(v);
-                return false;
-            }
-        </script>
-
-        <script>
-            $('textarea').keypress(function(e) {
-                var tval = $('textarea').val(),
-                    tlength = tval.length,
-                    set = 300,
-                    remain = parseInt(set - tlength);
-                $('p').text(remain);
-                if (remain <= 0 && e.which !== 0 && e.charCode !== 0) {
-                    $('textarea').val((tval).substring(0, tlength - 1))
-                }
-            })
-        </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -428,6 +342,98 @@
 
 
 </section>
+
+<script>
+	var loader = document.getElementById("preloader");
+	
+	window.addEventListener("load", function(){
+		loader.style.display = "none";
+	})
+</script>
+
+
+
+
+
+
+
+
+
+
+        <!-- Animation -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="{% static 'js/flickity.pkgd.min.js'%}"></script>
+        <script src="{% static 'js/testimonial.js'%}"></script>
+        <script src="{% static 'js/modal.js'%}"></script>
+        <script src="{% static 'js/read-more.js'%}"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            function toggle_div_fun(id) {
+                var divelement = document.getElementById(id);
+                if (divelement.style.display == 'block')
+                    divelement.style.display = 'none';
+                else
+                    divelement.style.display = 'block';
+            }
+        </script>
+
+        <script>
+            $(function () {
+                $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                })
+            })
+        </script>
+
+        <script>
+            jQuery(function($) {
+                var path = window.location.href;
+                $('ul a').each(function() {
+                    if (this.href === path) {
+                        $(this).addClass('active');
+                    }
+                });
+            });
+        </script>
+
+
+        <script>
+            flatpickr("#arrival-date", {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+            });
+
+            flatpickr("#departure-date", {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+            });
+        </script>
+
+        <script>
+            function addName(v){
+                document.getElementById('pref-stay').value = v
+                console.log(v);
+                return false;
+            }
+        </script>
+
+        <script>
+            $('textarea').keypress(function(e) {
+                var tval = $('textarea').val(),
+                    tlength = tval.length,
+                    set = 300,
+                    remain = parseInt(set - tlength);
+                $('p').text(remain);
+                if (remain <= 0 && e.which !== 0 && e.charCode !== 0) {
+                    $('textarea').val((tval).substring(0, tlength - 1))
+                }
+            })
+        </script>
+
+
+
 
 
 

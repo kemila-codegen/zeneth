@@ -24,6 +24,7 @@ urlpatterns = [
     path('partner_with_us', include('zeneth.urls')),
     path('our_collection', include('zeneth.urls')),
     path('contact', include('zeneth.urls')),
+    path('privacy_policy', include('zeneth.urls')),
     path('admin/', admin.site.urls),
 ]
 

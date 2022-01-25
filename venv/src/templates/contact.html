@@ -14,6 +14,9 @@
 
 
 
+
+<div id="preloader"></div>
+
 <!--- Fixed background -->
 <figure>
     <div class="fixed-wrap ">
@@ -119,6 +122,16 @@
         </div>
     </div>
 </div>
+
+
+
+<script>
+	var loader = document.getElementById("preloader");
+	
+	window.addEventListener("load", function(){
+		loader.style.display = "none";
+	})
+</script>
 
 
 {% endblock %}

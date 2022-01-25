@@ -5,7 +5,7 @@
 
 
 
-
+<div id="preloader"></div>
 <!--- Image Slider -->
 
 <div id="slides" class="carousel" data-ride="carousel">
@@ -255,7 +255,13 @@
 
 
 
-
+<script>
+	var loader = document.getElementById("preloader");
+	
+	window.addEventListener("load", function(){
+		loader.style.display = "none";
+	})
+</script>
 
 
 

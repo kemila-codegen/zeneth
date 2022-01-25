@@ -24,3 +24,7 @@ def our_collection(request):
 
 def partner_with_us(request):
     return render(request, "partner_with_us.html")
+
+def privacy_policy(request):
+    heading = privacyPolicy.objects.all()
+    return render(request, "privacy_policy.html", {'heading': heading})

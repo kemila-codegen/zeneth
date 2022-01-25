@@ -31,3 +31,20 @@ class imageGallery(models.Model):
     image_gallery_id = models.CharField(max_length=50)
     def __str__(self):
         return self.image_gallery_id
+
+
+
+class privacyPolicy(models.Model):
+    
+    heading = models.CharField(max_length=100)
+    desc = models.TextField()
+    def __str__(self):
+        return self.heading
+
+
+class testimonial(models.Model):
+    
+    name = models.CharField(max_length=100)
+    desc = models.TextField()
+    def __str__(self):
+        return self.name

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Navigation end -->
+
+<section class="l-page-body">
+    <div class="l-page-body__row l-wrapper">
+
+        <div class="c-our-services__main u-mt-50">
+            <h1 class="t2 ts-dark ts-center">TERMS &amp; CONDITIONS</h1>
+        </div>
+
+        <div class="c-privacy-policy aos-animate" data-aos="fade-up" data-aos-duration="2000">
+            <div class="c-privacy-policy-txt">
+                <span>Access to and use of this website is conditional upon your acceptance of these terms and conditions.</span>
+                <span>Please read the following terms and conditions closely before using our website.
+                    If you do not agree with any part of these terms and conditions, you must not use this website.</span>
+                <span>Any use of the website, or written communication with Zeneth Labs (Pvt) Ltd,
+                    for the purposes of travel arrangements, confirms that you are aged 18 or over and that you
+                    have read and fully accept these terms and conditions. These terms and conditions are devised for
+                    the protection of all parties.</span>
+            </div>
+        </div>
+
+
+        {% for head in heading %}
+        <div class="c-privacy-policy aos-animate" data-aos="fade-up" data-aos-duration="2000">
+            <div class="c-privacy-policy-txt">
+                <h2 class="t2 ts-dark">{{head.heading}}</h2>
+                {{head.desc|safe}}
+            </div>
+        </div>
+
+        {% endfor %}
+        
+
+    </div>
+
+
+</section>
+
+
+<script src="../js/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/read-more.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    $(function () {
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    })
+</script>
+
+<script src="../js/testimonial.js"></script>
+
+<script>
+    jQuery(function($) {
+        var path = window.location.href;
+        $('ul a').each(function() {
+            if (this.href === path) {
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
+
+</html>
+
+
+
+{% endblock %}
