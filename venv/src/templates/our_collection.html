@@ -435,6 +435,19 @@
 
 
 
+    <!-- below script to send contact FORM details to google sheet -->
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw4mW5Dcxc6DU3klnmViHHx4-z5HoYA0PWjt5GGA0C_pLzCuvsAiqE2ZmAm8yO0VLLI/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => $("#form_alerts").html("<div class='alert alert-success'>Contact message sent successfully.</div>"))
+        .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
+    })
+    </script>
 
 
 
