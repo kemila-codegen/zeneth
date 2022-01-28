@@ -3109,3 +3109,13 @@ a.read-more__link {
     padding: 0;
     margin: 2px;
 }
+
+
+#preloader{
+    background: white url(../images/GIF_Zenith_Labs.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
