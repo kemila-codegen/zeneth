@@ -1,0 +1,585 @@
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 06:17:40 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+PEP 405 virtualenv detected: /root/version-01/zeneth/venv
+Set PythonHome to /root/version-01/zeneth/venv
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x159d720
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "/root/version-01/zeneth/venv/src/./djangoproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1988143)
+spawned uWSGI worker 1 (pid: 1988144, cores: 1)
+spawned uWSGI worker 2 (pid: 1988145, cores: 1)
+spawned uWSGI worker 3 (pid: 1988146, cores: 1)
+spawned uWSGI worker 4 (pid: 1988147, cores: 1)
+spawned uWSGI worker 5 (pid: 1988148, cores: 1)
+spawned uWSGI worker 6 (pid: 1988149, cores: 1)
+spawned uWSGI worker 7 (pid: 1988150, cores: 1)
+spawned uWSGI worker 8 (pid: 1988151, cores: 1)
+spawned uWSGI worker 9 (pid: 1988152, cores: 1)
+spawned uWSGI worker 10 (pid: 1988153, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 1988146|app: -1|req: -1/1] 112.134.131.95 () {40 vars in 644 bytes} [Thu Jan 27 06:18:03 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1988146|app: -1|req: -1/2] 112.134.131.95 () {40 vars in 608 bytes} [Thu Jan 27 06:18:03 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1988146|app: -1|req: -1/3] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 06:18:13 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1988146|app: -1|req: -1/4] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 06:19:07 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1988146|app: -1|req: -1/5] 112.134.131.95 () {42 vars in 639 bytes} [Thu Jan 27 06:19:08 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /root/version-01/zeneth/venv/src/zenethvillas.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 10:48:13 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+Set PythonHome to /root/version-01/zeneth/
+Python path configuration:
+  PYTHONHOME = '/root/version-01/zeneth/'
+  PYTHONPATH = (not set)
+  program name = '/root/version-01/zeneth//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/root/version-01/zeneth//bin/python'
+  sys.base_prefix = '/root/version-01/zeneth'
+  sys.base_exec_prefix = '/root/version-01/zeneth'
+  sys.executable = '/root/version-01/zeneth//bin/python'
+  sys.prefix = '/root/version-01/zeneth'
+  sys.exec_prefix = '/root/version-01/zeneth'
+  sys.path = [
+    '/root/version-01/zeneth/lib/python38.zip',
+    '/root/version-01/zeneth/lib/python3.8',
+    '/root/version-01/zeneth/lib/python3.8/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f1fb7199080 (most recent call first):
+<no Python frame>
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 10:49:31 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+PEP 405 virtualenv detected: /root/version-01/zeneth/venv
+Set PythonHome to /root/version-01/zeneth/venv
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1e1a720
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "/root/version-01/zeneth/venv/src/./djangoproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1990693)
+spawned uWSGI worker 1 (pid: 1990694, cores: 1)
+spawned uWSGI worker 2 (pid: 1990695, cores: 1)
+spawned uWSGI worker 3 (pid: 1990696, cores: 1)
+spawned uWSGI worker 4 (pid: 1990697, cores: 1)
+spawned uWSGI worker 5 (pid: 1990698, cores: 1)
+spawned uWSGI worker 6 (pid: 1990699, cores: 1)
+spawned uWSGI worker 7 (pid: 1990700, cores: 1)
+spawned uWSGI worker 8 (pid: 1990701, cores: 1)
+spawned uWSGI worker 9 (pid: 1990702, cores: 1)
+spawned uWSGI worker 10 (pid: 1990703, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990695|app: -1|req: -1/1] 112.134.131.95 () {44 vars in 745 bytes} [Thu Jan 27 10:49:40 2022] GET /our_collection => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990697|app: -1|req: -1/2] 112.134.131.95 () {42 vars in 653 bytes} [Thu Jan 27 10:49:40 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990698|app: -1|req: -1/3] 112.134.131.95 () {44 vars in 745 bytes} [Thu Jan 27 10:49:54 2022] GET /our_collection => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990697|app: -1|req: -1/4] 112.134.131.95 () {42 vars in 653 bytes} [Thu Jan 27 10:49:54 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990703|app: -1|req: -1/5] 112.134.131.95 () {40 vars in 644 bytes} [Thu Jan 27 10:51:33 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990699|app: -1|req: -1/6] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 10:51:35 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990699|app: -1|req: -1/7] 112.134.131.95 () {42 vars in 639 bytes} [Thu Jan 27 10:51:36 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 10:54:16 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+PEP 405 virtualenv detected: /root/version-01/zeneth/venv
+Set PythonHome to /root/version-01/zeneth/venv
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1ad8720
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "/root/version-01/zeneth/venv/src/./djangoproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1990876)
+spawned uWSGI worker 1 (pid: 1990877, cores: 1)
+spawned uWSGI worker 2 (pid: 1990878, cores: 1)
+spawned uWSGI worker 3 (pid: 1990879, cores: 1)
+spawned uWSGI worker 4 (pid: 1990880, cores: 1)
+spawned uWSGI worker 5 (pid: 1990881, cores: 1)
+spawned uWSGI worker 6 (pid: 1990882, cores: 1)
+spawned uWSGI worker 7 (pid: 1990883, cores: 1)
+spawned uWSGI worker 8 (pid: 1990884, cores: 1)
+spawned uWSGI worker 9 (pid: 1990885, cores: 1)
+spawned uWSGI worker 10 (pid: 1990886, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990877|app: -1|req: -1/1] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 10:54:25 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990877|app: -1|req: -1/2] 112.134.131.95 () {42 vars in 639 bytes} [Thu Jan 27 10:54:25 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM WARNING: unix socket /root/version-01/zeneth/venv/src/zenethvillas.sock changed inode. Skip removal
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /root/version-01/zeneth/venv/src/zenethvillas.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 10:54:37 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+PEP 405 virtualenv detected: /root/version-01/zeneth/venv
+Set PythonHome to /root/version-01/zeneth/venv
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x19bd720
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "/root/version-01/zeneth/venv/src/./djangoproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1990898)
+spawned uWSGI worker 1 (pid: 1990899, cores: 1)
+spawned uWSGI worker 2 (pid: 1990900, cores: 1)
+spawned uWSGI worker 3 (pid: 1990901, cores: 1)
+spawned uWSGI worker 4 (pid: 1990902, cores: 1)
+spawned uWSGI worker 5 (pid: 1990903, cores: 1)
+spawned uWSGI worker 6 (pid: 1990904, cores: 1)
+spawned uWSGI worker 7 (pid: 1990905, cores: 1)
+spawned uWSGI worker 8 (pid: 1990906, cores: 1)
+spawned uWSGI worker 9 (pid: 1990907, cores: 1)
+spawned uWSGI worker 10 (pid: 1990908, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990900|app: -1|req: -1/1] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 10:54:58 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Thu Jan 27 10:54:58 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /favicon.ico (ip 112.134.131.95) !!!
+Thu Jan 27 10:54:58 2022 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /favicon.ico (112.134.131.95)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990902|app: -1|req: -1/2] 112.134.131.95 () {42 vars in 639 bytes} [Thu Jan 27 10:54:58 2022] GET /favicon.ico => generated 0 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 0 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990900|app: -1|req: -1/3] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 10:58:33 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Thu Jan 27 10:58:33 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /favicon.ico (ip 112.134.131.95) !!!
+Thu Jan 27 10:58:33 2022 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /favicon.ico (112.134.131.95)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990901|app: -1|req: -1/4] 112.134.131.95 () {42 vars in 639 bytes} [Thu Jan 27 10:58:33 2022] GET /favicon.ico => generated 0 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 0 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990900|app: -1|req: -1/5] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 11:12:42 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990900|app: -1|req: -1/6] 112.134.131.95 () {42 vars in 639 bytes} [Thu Jan 27 11:12:42 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1990900|app: -1|req: -1/7] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 11:12:50 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /root/version-01/zeneth/venv/src/zenethvillas.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 11:22:55 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+PEP 405 virtualenv detected: /root/version-01/zeneth/venv
+Set PythonHome to /root/version-01/zeneth/venv
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1ddd720
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "/root/version-01/zeneth/venv/src/./djangoproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1991339)
+spawned uWSGI worker 1 (pid: 1991340, cores: 1)
+spawned uWSGI worker 2 (pid: 1991341, cores: 1)
+spawned uWSGI worker 3 (pid: 1991342, cores: 1)
+spawned uWSGI worker 4 (pid: 1991343, cores: 1)
+spawned uWSGI worker 5 (pid: 1991344, cores: 1)
+spawned uWSGI worker 6 (pid: 1991345, cores: 1)
+spawned uWSGI worker 7 (pid: 1991346, cores: 1)
+spawned uWSGI worker 8 (pid: 1991347, cores: 1)
+spawned uWSGI worker 9 (pid: 1991348, cores: 1)
+spawned uWSGI worker 10 (pid: 1991349, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 1991343|app: -1|req: -1/1] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 11:23:03 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 1991343|app: -1|req: -1/2] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 11:23:05 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /root/version-01/zeneth/venv/src/zenethvillas.sock removed.
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 11:24:22 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+Set PythonHome to /root/virtual-environments/myprojectenv/
+Python path configuration:
+  PYTHONHOME = '/root/virtual-environments/myprojectenv/'
+  PYTHONPATH = (not set)
+  program name = '/root/virtual-environments/myprojectenv//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/root/virtual-environments/myprojectenv//bin/python'
+  sys.base_prefix = '/root/virtual-environments/myprojectenv'
+  sys.base_exec_prefix = '/root/virtual-environments/myprojectenv'
+  sys.executable = '/root/virtual-environments/myprojectenv//bin/python'
+  sys.prefix = '/root/virtual-environments/myprojectenv'
+  sys.exec_prefix = '/root/virtual-environments/myprojectenv'
+  sys.path = [
+    '/root/virtual-environments/myprojectenv/lib/python38.zip',
+    '/root/virtual-environments/myprojectenv/lib/python3.8',
+    '/root/virtual-environments/myprojectenv/lib/python3.8/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fe15fc47080 (most recent call first):
+<no Python frame>
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 11:24:51 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+Set PythonHome to /root/virtual-environments/myprojectenv/
+Python path configuration:
+  PYTHONHOME = '/root/virtual-environments/myprojectenv/'
+  PYTHONPATH = (not set)
+  program name = '/root/virtual-environments/myprojectenv//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/root/virtual-environments/myprojectenv//bin/python'
+  sys.base_prefix = '/root/virtual-environments/myprojectenv'
+  sys.base_exec_prefix = '/root/virtual-environments/myprojectenv'
+  sys.executable = '/root/virtual-environments/myprojectenv//bin/python'
+  sys.prefix = '/root/virtual-environments/myprojectenv'
+  sys.exec_prefix = '/root/virtual-environments/myprojectenv'
+  sys.path = [
+    '/root/virtual-environments/myprojectenv/lib/python38.zip',
+    '/root/virtual-environments/myprojectenv/lib/python3.8',
+    '/root/virtual-environments/myprojectenv/lib/python3.8/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fe688fb8080 (most recent call first):
+<no Python frame>
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Jan 27 11:37:46 2022] ***
+compiled with version: 8.5.0 20210514 (Red Hat 8.5.0-4) on 27 January 2022 06:16:01
+os: Linux-4.18.0-147.el8.x86_64 #1 SMP Wed Dec 4 21:51:45 UTC 2019
+nodename: server1.zenethlabs.lk
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/version-01/zeneth/venv/src
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/version-01/zeneth/venv/src/
+your processes number limit is 7839
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/version-01/zeneth/venv/src/zenethvillas.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.12 (default, Jan 18 2022, 02:58:07)  [GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x29e7650
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x29e7650 pid: 1991603 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1991603)
+spawned uWSGI worker 1 (pid: 1991605, cores: 1)
+spawned uWSGI worker 2 (pid: 1991606, cores: 1)
+spawned uWSGI worker 3 (pid: 1991607, cores: 1)
+spawned uWSGI worker 4 (pid: 1991608, cores: 1)
+spawned uWSGI worker 5 (pid: 1991609, cores: 1)
+spawned uWSGI worker 6 (pid: 1991610, cores: 1)
+spawned uWSGI worker 7 (pid: 1991611, cores: 1)
+spawned uWSGI worker 8 (pid: 1991612, cores: 1)
+spawned uWSGI worker 9 (pid: 1991613, cores: 1)
+spawned uWSGI worker 10 (pid: 1991614, cores: 1)
+[pid: 1991613|app: 0|req: 1/1] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 11:37:54 2022] GET / => generated 16353 bytes in 66 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991613|app: 0|req: 2/2] 112.134.131.95 () {42 vars in 675 bytes} [Thu Jan 27 11:38:40 2022] GET / => generated 16353 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991610|app: 0|req: 1/3] 112.134.131.95 () {42 vars in 695 bytes} [Thu Jan 27 11:38:43 2022] GET /contact => generated 12486 bytes in 49 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991610|app: 0|req: 2/4] 112.134.131.95 () {42 vars in 716 bytes} [Thu Jan 27 11:38:44 2022] GET /our_collection => generated 36954 bytes in 23 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991610|app: 0|req: 3/5] 112.134.129.145 () {40 vars in 645 bytes} [Thu Jan 27 16:10:35 2022] GET / => generated 16353 bytes in 18 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+Thu Jan 27 16:10:38 2022 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /favicon.ico (ip 112.134.129.145) !!!
+Thu Jan 27 16:10:38 2022 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /favicon.ico (112.134.129.145)
+OSError: write error
+[pid: 1991610|app: 0|req: 4/6] 112.134.129.145 () {40 vars in 609 bytes} [Thu Jan 27 16:10:38 2022] GET /favicon.ico => generated 0 bytes in 22 msecs (HTTP/1.1 404) 6 headers in 0 bytes (0 switches on core 0)
+[pid: 1991610|app: 0|req: 5/7] 112.134.129.145 () {42 vars in 676 bytes} [Thu Jan 27 16:10:49 2022] GET / => generated 16353 bytes in 9 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991610|app: 0|req: 6/8] 112.134.129.145 () {42 vars in 710 bytes} [Thu Jan 27 16:10:55 2022] GET /our_collection => generated 36954 bytes in 17 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991610|app: 0|req: 7/9] 112.134.129.145 () {38 vars in 473 bytes} [Thu Jan 27 16:11:21 2022] GET / => generated 16353 bytes in 9 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991610|app: 0|req: 8/10] 112.134.129.145 () {42 vars in 710 bytes} [Thu Jan 27 16:13:04 2022] GET /contact => generated 12486 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991610|app: 0|req: 9/11] 112.134.129.145 () {42 vars in 719 bytes} [Thu Jan 27 16:13:06 2022] GET /partner_with_us => generated 28083 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 209 bytes (2 switches on core 0)
+[pid: 1991611|app: 0|req: 1/12] 112.134.129.145 () {42 vars in 707 bytes} [Thu Jan 27 16:13:15 2022] GET /about => generated 18862 bytes in 70 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991610|app: 0|req: 10/13] 112.134.129.145 () {42 vars in 687 bytes} [Thu Jan 27 16:13:29 2022] GET / => generated 16353 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991612|app: 0|req: 1/14] 112.134.129.145 () {44 vars in 718 bytes} [Thu Jan 27 16:15:56 2022] GET / => generated 16353 bytes in 142 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991612|app: 0|req: 2/15] 112.134.129.145 () {42 vars in 712 bytes} [Thu Jan 27 16:16:03 2022] GET /partner_with_us => generated 28083 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991612|app: 0|req: 3/16] 112.134.129.145 () {42 vars in 711 bytes} [Thu Jan 27 16:16:06 2022] GET /contact => generated 12486 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1991612|app: 0|req: 4/17] 112.134.129.145 () {42 vars in 826 bytes} [Thu Jan 27 16:16:22 2022] GET /contact?name=test&email=imash%40codegen.net&subject=test&message=test => generated 12486 bytes in 5 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
